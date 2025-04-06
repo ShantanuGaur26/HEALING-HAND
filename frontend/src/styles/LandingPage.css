@@ -1,0 +1,82 @@
+/* Wrapper for the main content area */
+.landing-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  /* If you want center alignment for text, you can keep text-align: center;
+     or remove it if you prefer left alignment. */
+  text-align: center;
+}
+
+/* Card section below the search bar */
+.card-section {
+  display: flex;
+  justify-content: center; /* Center the card row */
+  gap: 1.5rem;             /* Space between cards */
+  margin: 2rem 0;
+  flex-wrap: wrap;        /* Wrap cards on smaller screens */
+}
+
+/* Individual card */
+.card {
+  background-color: #bee2f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  flex: 1 1 250px; /* Grow/shrink, min width ~250px */
+  max-width: 250px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.card img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  
+}
+
+/* Section for consultation info */
+.consultation-section {
+  margin: 3rem 0;
+}
+
+.consultation-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.consultation-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Button to view all specialties */
+.view-all-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #00a6de;
+  background-color: #fff;
+  color: #00a6de;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.view-all-button:hover {
+  background-color: #00a6de;
+  color: #fff;
+}
