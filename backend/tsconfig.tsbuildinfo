@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/database/index.ts"],"version":"5.7.2"}
+{"root":["./src/index.ts","./src/database/appointment.ts","./src/database/doctor.ts","./src/database/index.ts","./src/database/patient.ts","./src/routes/doctor.ts","./src/routes/patient.ts"],"version":"5.7.2"}
