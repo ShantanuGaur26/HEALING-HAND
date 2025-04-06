@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className="navbar">
       {/* Left side: Logo + Primary Nav */}
@@ -16,7 +19,7 @@ const Navbar: React.FC = () => {
             <a href="#">Find Doctors</a>
           </li>
           <li>
-            <a href="#">Video Consult</a>
+            <a href="/VcLanding">Video Consult</a>
           </li>
           <li>
             <a href="#">Surgeries</a>
@@ -40,7 +43,9 @@ const Navbar: React.FC = () => {
             <span className="arrow">▼</span>
           </li>
         </ul>
-        <button className="login-btn">Login / Signup</button>
+        <button className="login-btn" onClick={() => navigate("/auth")}>
+          Login / Signup
+        </button>
       </div>
     </nav>
   );
