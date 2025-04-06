@@ -1,0 +1,125 @@
+/* Overall page container */
+.doctor-list-page {
+  font-family:  sans-serif;
+  color: #333;
+}
+
+
+/* Main content wrapper */
+.content-wrapper {
+  display: flex;
+  margin: 2rem;
+}
+
+/* Sidebar for specialties */
+.sidebar {
+    margin-top: 4rem;
+  flex: 0 0 250px;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.specialty-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.specialty-list li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.specialty-list li:hover {
+  color: #00a6de;
+}
+
+.active-specialty {
+  color: #00a6de;
+  font-weight: 600;
+}
+
+/* Doctor cards container */
+.doctor-list-container {
+    margin-top: 2.5rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-height: 800px;
+}
+
+/* Individual doctor card */
+.doctor-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  max-width: 300px;
+}
+
+.doctor-card img {
+  width: 75%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-info {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.doctor-info h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.doctor-specialty {
+  font-size: 0.9rem;
+  color: #777;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.status-available {
+  color: #28a745; /* green */
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.status-unavailable {
+  color: #dc3545; /* red */
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .sidebar {
+    margin-bottom: 1rem;
+  }
+
+  .doctor-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}

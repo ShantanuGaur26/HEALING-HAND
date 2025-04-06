@@ -18,6 +18,10 @@ const LOCATIONS: Location[] = [
   { id: 6, name: "Hazratganj", city: "Lucknow" },
   { id: 7, name: "Mahanagar", city: "Lucknow" },
   { id: 8, name: "Ashiyana", city: "Lucknow" },
+  { id: 9, name: "Jamia", city: "Delhi" },
+  { id: 10, name: "Lajpat", city: "Delhi" },
+  { id: 11, name: "Sukhdev", city: "Delhi" },
+  { id: 12, name: "CP", city: "Delhi" },
   // ...add more as needed
 ];
 
@@ -86,12 +90,31 @@ const ImprovedSearchBar: React.FC = () => {
     setShowLocationDropdown(false);
   };
 
-  const handleUseMyLocation = () => {
-    // In a real app, you'd use geolocation or user’s saved location
-    // For demo, just close the dropdown
-    setShowLocationDropdown(false);
-    alert("Using your current location!");
-  };
+ const handleUseMyLocation = () => {
+   if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(
+       (position) => {
+         const { latitude, longitude } = position.coords;
+         console.log("Latitude:", latitude, "Longitude:", longitude);
+         // Here, perform reverse geocoding if needed.
+         setLocationQuery("My Location");
+         setShowLocationDropdown(false);
+       },
+       (error) => {
+         console.error("Error getting geolocation:", error);
+         alert("Unable to retrieve your location. Please try again.");
+       },
+       {
+         enableHighAccuracy: true, // Use high accuracy if available
+         timeout: 10000, // Wait up to 10 seconds
+         maximumAge: 0, // Do not cache the position
+       }
+     );
+   } else {
+     alert("Geolocation is not supported by this browser.");
+   }
+ };
+
 
   const handleSearchFocus = () => {
     if (searchQuery) {

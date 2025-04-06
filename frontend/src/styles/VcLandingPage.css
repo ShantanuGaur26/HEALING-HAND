@@ -1,0 +1,143 @@
+/* Container for the entire page content */
+.online-consult-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #fde9e4; /* Light peach background to mimic the screenshot */
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1.4rem;
+  width:100%;
+  
+}
+
+/* Hero content: text on the left */
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.hero-highlight {
+  color: #00a6de;
+  font-weight: 500;
+}
+
+.consult-now-btn {
+  background-color: #00a6de;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.2s ease;
+}
+
+.consult-now-btn:hover {
+  background-color: #008cb9;
+}
+
+/* Features row (Verified Doctors, Digital Prescription, Free followup) */
+.features-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.feature-item span {
+  margin-right: 0.5rem;
+  color: #00a6de;
+  font-weight: bold;
+}
+
+/* Hero Image on the right */
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Specialities Section */
+.specialities-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.specialities-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.specialities-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.view-all-button {
+  background-color: #fff;
+  color: #00a6de;
+  border: 1px solid #00a6de;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.view-all-button:hover {
+  background-color: #00a6de;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
