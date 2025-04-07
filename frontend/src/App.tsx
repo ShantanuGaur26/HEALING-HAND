@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import AuthPage from "./pages/AuthPage";
 import VcLandingPage from "./pages/VcLandingPage";
 import Doctor from "./pages/DoctorsList";
+import FindDoctor from "./pages/FindDoctor";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/VcLanding" element={<VcLandingPage />} />
         <Route path="/doctor" element={<Doctor />} />
+        <Route path="/Finddoctor" element={<FindDoctor />} />
       </Routes>
     </BrowserRouter>
   );
