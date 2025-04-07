@@ -28,6 +28,9 @@ const doctorSchema = new mongoose.Schema({
     state: String,
     zip: String,
   },
+  specialisation:{
+    type:String
+  },
   appointments: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -38,7 +41,33 @@ const doctorSchema = new mongoose.Schema({
     reviews: [String],
     avgrating: Number,
     totalrating: Number,
+    default:0,
   },
+  experience:{
+    type:Array,
+  },
+  bio:{ type:String,maxLenght:50},
+  timeSlots:{type:Array},
+  isApproved:{
+    type:String,
+    enum:["pending","approved","cancelled"],
+    default:"pending",
+  }
+
 });
 export const DoctorModel = mongoose.model("Doctor", doctorSchema);
 // module.exports = DoctorModel;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
