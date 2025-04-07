@@ -16,13 +16,13 @@ const Navbar: React.FC = () => {
         </div>
         <ul className="nav-links">
           <li>
-            <a href="#">Find Doctors</a>
+            <a href="Finddoctor">Find Doctors</a>
           </li>
           <li>
             <a href="/VcLanding">Video Consult</a>
           </li>
           <li>
-            <a href="#">Surgeries</a>
+            <a href="/chatlanding">Chat with Doctor</a>
           </li>
         </ul>
       </div>
@@ -31,12 +31,10 @@ const Navbar: React.FC = () => {
       <div className="navbar-right">
         <ul className="nav-actions">
           <li className="dropdown">
-            <a href="#">For Corporates</a>
-            <span className="arrow">▼</span>
+            <a href="/authdoc">For Doctors</a>
           </li>
           <li className="dropdown">
-            <a href="#">For Providers</a>
-            <span className="arrow">▼</span>
+            <a href="/chat">For Labs</a>
           </li>
           <li className="dropdown">
             <a href="#">Security & help</a>

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import "../styles/VcLandingPage.css";
 import Footer from "../components/Footer";
 import img5 from "../assets/img.png";
+import { useNavigate } from "react-router-dom";
 
 const ALL_CITIES = [
   "Bangalore",
@@ -32,6 +33,7 @@ const ALL_SPECIALTIES = [
 ];
 
 const OnlineConsultPage: React.FC = () => {
+  const navigate = useNavigate();
   const [showSpecialities, setShowSpecialities] = useState(false);
 
   const toggleSpecialities = () => {
@@ -52,7 +54,12 @@ const OnlineConsultPage: React.FC = () => {
               <br />
               <span className="hero-highlight">+120 Doctors are online</span>
             </p>
-            <button className="consult-now-btn">Consult Now</button>
+            <button
+              className="consult-now-btn"
+              onClick={() => navigate("/chat")}
+            >
+              Chat Now
+            </button>
 
             {/* Quick features row */}
             <div className="features-row">
