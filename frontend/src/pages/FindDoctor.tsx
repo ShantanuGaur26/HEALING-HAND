@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar"; // Adjust import path if needed
 import "../styles/FindDoctor.css";
 import Footer from "../components/Footer";
