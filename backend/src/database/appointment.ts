@@ -3,16 +3,16 @@ const appointmentSchema = new mongoose.Schema({
   patient: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Patient",
-    // required: true
+    required: true
   },
   doctor: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Doctor",
-    // required: true
+    required: true
   },
   date: {
     type: Date,
-    // required: true
+    required: true
   },
   status: {
     type: String,
@@ -24,11 +24,14 @@ const appointmentSchema = new mongoose.Schema({
     default: Date.now,
     // required: true
   },
-  mode: String,
-
-  token: String,
+  mode: {
+    type: String,
+    enum: ["Online", "In-Person"],
+    default: "Online",
+  },
+  // token: String,
 });
 
-const AppointmentModel = mongoose.model("Appointment", appointmentSchema);
+export const AppointmentModel = mongoose.model("Appointment", appointmentSchema);
 
-module.exports = AppointmentModel;
+// module.exports = AppointmentModel;
