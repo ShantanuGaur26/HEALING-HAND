@@ -10,7 +10,7 @@ const Chat: React.FC = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const roomId = urlParams.get("roomid");
 
-    ws.current = new WebSocket("ws://localhost:3001");
+    ws.current = new WebSocket(import.meta.env.VITE_WS_URL as string);
     console.log(import.meta.env.VITE_WS_URL);
 
     ws.current.onopen = () => {
